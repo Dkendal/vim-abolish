@@ -614,4 +614,29 @@ if exists(':S') != 2
         \ :exec s:subvert_dispatcher(<bang>0,<line1>,<line2>,<count>,<q-args>)
 endif
 
+" exposed string functions
+function! ToMixedcase(word)
+  return s:mixedcase(a:word)
+endfunction
+
+function! ToCamelcase(word)
+  return s:camelcase(a:word)
+endfunction
+
+function! ToSnakecase(word)
+  return s:snakecase(a:word)
+endfunction
+
+function! ToUppercase(word)
+  return s:uppercase(a:word)
+endfunction
+
+function! ToDashcase(word)
+  return s:dashcase(a:word)
+endfunction
+
+function! ToDotcase(word)
+  return s:dotcase(a:word)
+endfunction
+
 " vim:set ft=vim sw=2 sts=2:
